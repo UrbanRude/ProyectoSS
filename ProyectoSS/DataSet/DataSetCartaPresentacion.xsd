@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetCartaPresentacion" targetNamespace="http://tempuri.org/DataSetCartaPresentacion.xsd" xmlns:mstns="http://tempuri.org/DataSetCartaPresentacion.xsd" xmlns="http://tempuri.org/DataSetCartaPresentacion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetCartaPresentacion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetCartaPresentacion" msprop:Generator_UserDSName="DataSetCartaPresentacion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CartaPresentacion" msprop:Generator_TableClassName="CartaPresentacionDataTable" msprop:Generator_TableVarName="tableCartaPresentacion" msprop:Generator_TablePropName="CartaPresentacion" msprop:Generator_RowDeletingName="CartaPresentacionRowDeleting" msprop:Generator_RowChangingName="CartaPresentacionRowChanging" msprop:Generator_RowEvHandlerName="CartaPresentacionRowChangeEventHandler" msprop:Generator_RowDeletedName="CartaPresentacionRowDeleted" msprop:Generator_UserTableName="CartaPresentacion" msprop:Generator_RowChangedName="CartaPresentacionRowChanged" msprop:Generator_RowEvArgName="CartaPresentacionRowChangeEvent" msprop:Generator_RowClassName="CartaPresentacionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idAsigReceptora" msprop:Generator_ColumnVarNameInTable="columnidAsigReceptora" msprop:Generator_ColumnPropNameInRow="idAsigReceptora" msprop:Generator_ColumnPropNameInTable="idAsigReceptoraColumn" msprop:Generator_UserColumnName="idAsigReceptora" type="xs:int" minOccurs="0" />
+              <xs:element name="nombreEncargado" msprop:Generator_ColumnVarNameInTable="columnnombreEncargado" msprop:Generator_ColumnPropNameInRow="nombreEncargado" msprop:Generator_ColumnPropNameInTable="nombreEncargadoColumn" msprop:Generator_UserColumnName="nombreEncargado" type="xs:string" minOccurs="0" />
+              <xs:element name="cargo" msprop:Generator_ColumnVarNameInTable="columncargo" msprop:Generator_ColumnPropNameInRow="cargo" msprop:Generator_ColumnPropNameInTable="cargoColumn" msprop:Generator_UserColumnName="cargo" type="xs:string" minOccurs="0" />
+              <xs:element name="nombreEnt" msprop:Generator_ColumnVarNameInTable="columnnombreEnt" msprop:Generator_ColumnPropNameInRow="nombreEnt" msprop:Generator_ColumnPropNameInTable="nombreEntColumn" msprop:Generator_UserColumnName="nombreEnt" type="xs:string" minOccurs="0" />
+              <xs:element name="nombreAlumno" msprop:Generator_ColumnVarNameInTable="columnnombreAlumno" msprop:Generator_ColumnPropNameInRow="nombreAlumno" msprop:Generator_ColumnPropNameInTable="nombreAlumnoColumn" msprop:Generator_UserColumnName="nombreAlumno" type="xs:string" minOccurs="0" />
+              <xs:element name="Matricula" msprop:Generator_ColumnVarNameInTable="columnMatricula" msprop:Generator_ColumnPropNameInRow="Matricula" msprop:Generator_ColumnPropNameInTable="MatriculaColumn" msprop:Generator_UserColumnName="Matricula" type="xs:string" minOccurs="0" />
+              <xs:element name="creditos" msprop:Generator_ColumnVarNameInTable="columncreditos" msprop:Generator_ColumnPropNameInRow="creditos" msprop:Generator_ColumnPropNameInTable="creditosColumn" msprop:Generator_UserColumnName="creditos" type="xs:string" minOccurs="0" />
+              <xs:element name="Carrera" msprop:Generator_ColumnVarNameInTable="columnCarrera" msprop:Generator_ColumnPropNameInRow="Carrera" msprop:Generator_ColumnPropNameInTable="CarreraColumn" msprop:Generator_UserColumnName="Carrera" type="xs:string" minOccurs="0" />
+              <xs:element name="NSS" msprop:Generator_ColumnVarNameInTable="columnNSS" msprop:Generator_ColumnPropNameInRow="NSS" msprop:Generator_ColumnPropNameInTable="NSSColumn" msprop:Generator_UserColumnName="NSS" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

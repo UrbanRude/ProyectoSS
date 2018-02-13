@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17E8DB87-598E-4081-AAEC-F0E76B9C5281}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProyectoSS</RootNamespace>
+    <AssemblyName>ProyectoSS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Alumnos.cs" />
+    <Compile Include="Class\Carreras.cs" />
+    <Compile Include="Class\DBConn.cs" />
+    <Compile Include="Class\Encargados.cs" />
+    <Compile Include="Class\EntidadesReceptoras.cs" />
+    <Compile Include="Class\Entregable.cs" />
+    <Compile Include="Class\Semestre.cs" />
+    <Compile Include="Class\ServicioSocial.cs" />
+    <Compile Include="Class\Usuario.cs" />
+    <Compile Include="DataSet\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DataSetCartaPresentacion.cs">
+      <DependentUpon>DataSetCartaPresentacion.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet\DataSetCartaPresentacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCartaPresentacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormServicio\AgregarAlumnoRegistroAutorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServicio\AgregarAlumnoRegistroAutorizacion.Designer.cs">
+      <DependentUpon>AgregarAlumnoRegistroAutorizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServicio\AltaCartaPresentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServicio\AltaCartaPresentacion.Designer.cs">
+      <DependentUpon>AltaCartaPresentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServicio\AltaEncargado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServicio\AltaEncargado.Designer.cs">
+      <DependentUpon>AltaEncargado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServicio\AltaEntidadReceptora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServicio\AltaEntidadReceptora.Designer.cs">
+      <DependentUpon>AltaEntidadReceptora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServicio\ArchivoExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServicio\ArchivoExcel.Designer.cs">
+      <DependentUpon>ArchivoExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServicio\Entregables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServicio\Entregables.Designer.cs">
+      <DependentUpon>Entregables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServicio\ListaVerificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServicio\ListaVerificacion.Designer.cs">
+      <DependentUpon>ListaVerificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServicio\RegistroAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServicio\RegistroAuto.Designer.cs">
+      <DependentUpon>RegistroAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServicio\RegistroAutorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServicio\RegistroAutorizacion.Designer.cs">
+      <DependentUpon>RegistroAutorizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI.Designer.cs">
+      <DependentUpon>MDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rpt\CartaPresent.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CartaPresent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt\CartaPresentacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CartaPresentacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpt\FormCarta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpt\FormCarta.Designer.cs">
+      <DependentUpon>FormCarta.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormServicio\AgregarAlumnoRegistroAutorizacion.resx">
+      <DependentUpon>AgregarAlumnoRegistroAutorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServicio\AltaCartaPresentacion.resx">
+      <DependentUpon>AltaCartaPresentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServicio\AltaEncargado.resx">
+      <DependentUpon>AltaEncargado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServicio\AltaEntidadReceptora.resx">
+      <DependentUpon>AltaEntidadReceptora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServicio\ArchivoExcel.resx">
+      <DependentUpon>ArchivoExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServicio\Entregables.resx">
+      <DependentUpon>Entregables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServicio\ListaVerificacion.resx">
+      <DependentUpon>ListaVerificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServicio\RegistroAuto.resx">
+      <DependentUpon>RegistroAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServicio\RegistroAutorizacion.resx">
+      <DependentUpon>RegistroAutorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI.resx">
+      <DependentUpon>MDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rpt\CartaPresent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CartaPresent.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt\CartaPresentacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CartaPresentacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt\FormCarta.resx">
+      <DependentUpon>FormCarta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetCartaPresentacion.xsc">
+      <DependentUpon>DataSetCartaPresentacion.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSetCartaPresentacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCartaPresentacion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DataSetCartaPresentacion.xss">
+      <DependentUpon>DataSetCartaPresentacion.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_btn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_system-users_15357.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_document-open_15267.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
